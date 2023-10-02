@@ -4,6 +4,8 @@ import TheoNghe from "./theonghe";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import TheoDuAn from "./theoduan";
+import Banthoigian from "./banthoigian";
+import TheoDiadiem from "./theodiadiem";
 const TrangChu = () => {
   const option = [
     {
@@ -120,7 +122,9 @@ const TrangChu = () => {
         </div>
       </div>
       <TheoNghe />
-      <TheoDuAn/>
+      <TheoDuAn />
+      <Banthoigian />
+      <TheoDiadiem />
     </div>
   );
 };

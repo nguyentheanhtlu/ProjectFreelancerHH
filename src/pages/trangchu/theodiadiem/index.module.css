@@ -1,0 +1,77 @@
+.cover_item02_home {
+  float: left;
+  width: 100%;
+  background: #fff;
+}
+.container {
+  width: 95%;
+  margin: auto;
+  max-width: 1275px;
+}
+.cover_job {
+  float: left;
+  width: 100%;
+  padding: 120px 0;
+}
+.job_job_fix {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.job_job_fix > h2 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.job_job_fix > p {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #444;
+  font-weight: 400;
+}
+.list_diadiemviec{
+    float: left;
+    width: 100%;
+    margin-top: 60px;
+}
+.item_diadiem{
+    width: calc(100% / 4 - 18px);
+    margin: 0 9px;
+    float: left;
+    position: relative;
+    height: 360px;
+    list-style-type: none;
+}
+.item_diadiem > a {
+    text-decoration: unset;
+}
+.item_diadiem > a >img {
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text_vieclam{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+.text01_vieclam{
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.text02_vieclam{
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    background: #fff;
+    border-radius: 4px;
+    color: #333;
+}
