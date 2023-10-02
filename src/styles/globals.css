@@ -1,0 +1,11 @@
+body{
+    font-family: RobotoMedium !important;
+    margin: 0;
+}
+.footer_main{
+    padding: unset ! important;
+}
+.ant-select.trangchu_select_search__Dr8Jb.ant-select-single.ant-select-show-arrow.ant-select-show-search .ant-select-selector{
+    border: unset!important;
+   width: 178px !important;
+}

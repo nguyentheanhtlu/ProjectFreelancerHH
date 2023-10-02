@@ -1,0 +1,121 @@
+.cover_item02_home {
+  float: left;
+  width: 100%;
+  background: #fff;
+}
+.container {
+  width: 95%;
+  margin: auto;
+  max-width: 1275px;
+}
+.cover_job {
+  float: left;
+  width: 100%;
+  padding: 120px 0;
+}
+.job {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.title_h2_job {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.job > p {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #444;
+  font-weight: 400;
+}
+.job > a {
+  display: block;
+  text-align: right;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  text-decoration-line: underline;
+  color: #444;
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+.job > a > img {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 7px;
+}
+.content_it_duan {
+  display: flex;
+  flex-direction: column;
+  width: 349px;
+  height: 100%;
+  background: #fff;
+  box-sizing: border-box;
+}
+.content_it_top {
+  float: left;
+  width: 90%;
+  height: 171px;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+.content_it_top > img {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.bg_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: inherit;
+    top: 0;
+    background: linear-gradient(360deg,#0c0c0c 0,rgba(0,0,0,0) 42%);
+}
+.cover_user{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.cover_user > img {
+    border: 1px solid #d9d9d9;
+    object-fit: cover;
+    width: 65px;
+    height: 65px;
+    display: inline-block!important;
+    vertical-align: middle;
+    border-radius: 10px!important;
+}
+.name_user{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+}
+.cover_user > a{
+    text-decoration: unset;
+}
+.content_it_bottom{
+    flex: 1;
+    float: left;
+    width: 100%;
+    border-top: unset;
+    border: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    height: auto;
+    overflow: hidden;
+}
