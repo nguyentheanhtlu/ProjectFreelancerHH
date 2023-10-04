@@ -1,0 +1,158 @@
+.cover_content {
+  float: left;
+  width: 100%;
+}
+.container_main_container {
+  height: auto;
+  width: 95%;
+}
+.left_container {
+  float: left;
+  width: 20%;
+  padding: 0 0 20px;
+}
+.user_menu_block_mobi {
+  float: left;
+  text-align: center;
+  background: url("https://freelancer.timviec365.vn/images/bg_menu_mobi.png")
+    no-repeat;
+  background-size: 100% 100%;
+  padding: 16px 0;
+  margin: auto;
+  width: 100%;
+  display: none;
+}
+.user_menu_block_mobi > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: cover;
+}
+.user_menu_block_mobi > p {
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-left: 5px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.p_left_container {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin-top: 25px;
+}
+.p_left_container > p {
+  text-align: center;
+  color: #4c5bd4;
+  background: #f2f5fa;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 8px;
+  display: inline-block;
+}
+.menu_left_container {
+  float: left;
+  width: 100%;
+}
+.item_menu_left {
+  position: relative;
+  list-style-type: none;
+}
+.a_item_menu_ic_menu_ntd01_active {
+  border-left: 3px solid #4c5bd4;
+  color: #4c5bd4;
+  text-decoration: unset;
+  cursor: pointer;
+  padding: 5px 15px;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+}
+.a_item_menu_ic_menu_ntd01_active::before {
+  background: url(/ic_menu_ntd01.png) no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: #4c5bd4;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+.a_item_menu_ic_menu_ntd02 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666c7c;
+  display: block;
+  padding: 5px 15px;
+  border-left: 3px solid #fff;
+  cursor: pointer;
+}
+.a_item_menu_ic_menu_ntd02::before {
+  display: inline-block;
+  content: "";
+  background: url(/ic_menu_ntd02.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666c7c;
+  cursor: pointer;
+  list-style-type: none;
+}
+.a_item_menu_ic_menu_ntd02::after {
+  position: absolute;
+  content: "";
+  background: url(/ic_menu_ntd07.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  background-size: 100% 100%;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666c7c;
+  cursor: pointer;
+  list-style-type: none;
+}
+.a_item_menu_ic_menu_ntd02:hover {
+  border-left: 3px solid #4c5bd4;
+  color: #4c5bd4;
+}
+.a_item_menu_ic_menu_ntd04 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666c7c;
+  display: block;
+  padding: 5px 15px;
+  border-left: 3px solid #fff;
+  cursor: pointer;
+  text-decoration: unset;
+}
+.a_item_menu_ic_menu_ntd04::before {
+  display: inline-block;
+  content: "";
+  background: url(/ic_menu_ntd04.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.a_item_menu_ic_menu_ntd04:hover {
+  border-left: 3px solid #4c5bd4;
+  color: #4c5bd4;
+}

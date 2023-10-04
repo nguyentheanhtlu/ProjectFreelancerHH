@@ -1,0 +1,135 @@
+.main_header {
+  float: left;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  border: 1px solid #d5dce1;
+  box-sizing: border-box;
+  font-family: RobotoMedium;
+}
+.container_container_header {
+  height: 100%;
+  width: 95%;
+  margin: auto;
+  max-width: 1275px;
+}
+.block_pc_pc {
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.logo {
+  float: left;
+  padding: 20px 0;
+  border-right: 1px solid #d5dce1;
+  box-sizing: border-box;
+  width: 20%;
+}
+.logo > a {
+  width: 165px;
+  height: 36px;
+  display: block;
+  margin: auto;
+}
+
+.logo > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header_right {
+  float: right;
+  /* padding: 20px 0; */
+  text-align: right;
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+}
+.list_menu {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+.item_menu_it_header_list {
+  position: relative;
+  float: left;
+  margin: 0 10px;
+  list-style-type: none;
+}
+.a {
+  font-size: 16px;
+  line-height: 36px;
+  color: #495057;
+}
+.img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+.item_menu {
+  float: left;
+  margin: 0 10px;
+  list-style-type: none;
+}
+.item_menu > a {
+  font-size: 16px;
+  line-height: 36px;
+  color: #495057;
+}
+.btn_dangviec {
+  border: unset;
+  float: left;
+  background: #f46a6a;
+  border-radius: 30px;
+  padding: 7px 15px;
+  margin: 16px 10px;
+}
+.btn_dangviec > a {
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  font-family: RobotoMedium;
+  text-decoration: unset;
+}
+.icon_notifi {
+  display: block;
+  float: left;
+  text-align: center;
+  border-radius: 50%;
+  background: #f2f5fa;
+  width: 25px;
+  height: 25px;
+  margin: 12px 10px;
+  padding: 7px;
+  cursor: pointer;
+}
+.icon_notifi > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.border {
+  border: 1px solid #f2f5fa;
+  float: left;
+  width: 1px;
+  height: 36px;
+  margin-top: 10px;
+}
+.img_avata {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  float: left;
+  margin: 15px 10px;
+  cursor: pointer;
+}
+.img_avata > img {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
