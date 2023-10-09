@@ -1,10 +1,11 @@
 import NavBarCT from "@/components/navbarCT";
 import styles from "./index.module.css"
-const QuanLyTrung = () => {
+const QuanLyChung = () => {
 return(
-    <div>
+    <div className={styles.container}>
+       dshasjkdhjaskdhjkashdsahdsajkd
     </div>
 )
 }
 
-export default QuanLyTrung;
+export default QuanLyChung;

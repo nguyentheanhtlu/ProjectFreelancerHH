@@ -1,17 +1,27 @@
-import Footer from '@/components/footer/Footer'
-import HeaderComponents from '@/components/headerComponents'
-import NavbarComponents from '@/components/navbar'
-import '@/styles/globals.css'
+import Footer from "@/components/footer/Footer";
+import HeaderComponents from "@/components/headerComponents";
+import Home from "@/components/layout/home";
+import Layout from "@/components/layout/layout";
+import NavbarComponents from "@/components/navbar";
+import "@/styles/globals.css";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
-  
+  const router = useRouter();
+
+
   return (
-    <>
-    <HeaderComponents/>
-    <NavbarComponents/>
-    <Component {...pageProps} />
-    <link rel="stylesheet" href="https://timviec365.vn/css/footer_new.css?v=2"/>
-    <Footer/>
-    </>
-  )
+    <div>
+      {router.pathname.includes("trangchu") ? (
+        <Home>
+          <Component {...pageProps} />
+        </Home>
+      ) : (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
+    </div>
+  );
 }

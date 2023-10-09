@@ -1,0 +1,9 @@
+.container{
+    float: left;
+    width: 80%;
+    height: 100%;
+    background: #F7F9FB;
+    padding: 30px;
+    border-left: 1px solid #D5DCE1;
+    min-height: 600px;
+}
