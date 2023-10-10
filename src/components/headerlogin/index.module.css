@@ -1627,3 +1627,7 @@ select.error {
     }
   }
 }
+.img_hd{
+  width: 100%;
+  height: 100%;
+}

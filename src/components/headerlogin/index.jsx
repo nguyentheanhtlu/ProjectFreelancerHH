@@ -1,23 +1,13 @@
 import { Dropdown, Space } from "antd";
 import styles from "./index.module.css";
 const HeaderLogin = () => {
-  const items = [
-    {
-      key: "1",
-      label: "Việc làm freelancer bán thời gian",
-    },
-    {
-      key: "2",
-      label: "Việc làm freelancer theo dự án",
-    },
-  ];
   return (
     <div className={styles.main_header}>
       <div className={`${styles.container} ${styles.container_header}`}>
         <div className={`${styles.block_pc} ${styles.pc}`}>
           <div className={styles.logo}>
             <a href="/">
-              <img src="/logo.png" alt="logo timviec365.vn" />
+              <img className={styles.img_hd} src="/logo.png" alt="logo timviec365.vn" />
             </a>
           </div>
           <div className={styles.header_right}>
@@ -62,13 +52,14 @@ const HeaderLogin = () => {
               <a href="/dang-du-an.html"> + Đăng việc</a>
             </button>
             <div className={styles.icon_notifi}>
-              <img src="/icon_notifi.png" alt="icon_notifi" />
+              <img className={styles.img_hd} src="/icon_notifi.png" alt="icon_notifi" />
             </div>
             <div className={styles.border} />
             <div className={styles.img_avata}>
               <img
-                width="48px"
-                height="48px"
+              className={styles.img_hd}
+                width="35px"
+                height="35px"
                 src="/job-1695950247.png"
                 className=""
                 alt="avatar"

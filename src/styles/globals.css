@@ -58,11 +58,11 @@ ul {
 img {
   object-fit: cover;
 }
-a img,
-img {
-  width: 100%;
-  height: 100%;
-}
+/* a img,
+  img {
+    width: 100%;
+    height: 100%;
+  } */
 
 textarea {
   word-break: break-all;
@@ -94,9 +94,11 @@ input[type="date"] {
   padding: 10px;
 }
 input[type="date"] {
-    display: block;
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    min-height: 1.2em;
-    text-align: left !important;
-  }
+  display: block;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  min-height: 1.2em;
+  text-align: left !important;
+}
+
+
