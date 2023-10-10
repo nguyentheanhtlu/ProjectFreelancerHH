@@ -1,4 +1,4 @@
-import { Collapse, Dropdown, Space } from "antd";
+import { Collapse, Dropdown, Modal, Space } from "antd";
 import styles from "./index.module.css";
 import DropdownQLHS from "../Dropdown/dropdownQLHS";
 import DropdownQLTS from "../Dropdown/dropdownQLTS";
@@ -10,6 +10,16 @@ const NavBarCT = () => {
   const [event2, setEvent2] = useState(false);
   const setStausNavBar = (callback, state) => {
     callback(!state);
+  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -151,7 +161,10 @@ const NavBarCT = () => {
                   </a>
                 </li>
                 <li>
-                  <p className={`${styles.it_sub_menu_left} logout_click`}>
+                  <p
+                    className={`${styles.it_sub_menu_left} logout_click`}
+                    onClick={showModal}
+                  >
                     Đăng xuất
                   </p>
                 </li>
@@ -160,6 +173,14 @@ const NavBarCT = () => {
           ) : null}
         </li>
       </ul>
+      <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+        <div className={`${styles.popup_logout} ${styles.main_popup}`}>
+          <p className={`${styles.title_logout}`}>Đăng xuất</p>
+          <p className={`${styles.content_logout}`}>
+            Bạn muốn đăng xuất khỏi hệ thống ?
+          </p>
+        </div>
+      </Modal>
     </div>
   );
 };

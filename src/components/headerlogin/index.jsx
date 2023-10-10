@@ -1,13 +1,49 @@
-import { Dropdown, Space } from "antd";
+import { Dropdown, Popover, Space } from "antd";
 import styles from "./index.module.css";
 const HeaderLogin = () => {
+  const content = (
+    <div className={`${styles.popup_user}`}>
+      <div className={styles.fix_xt}>
+        <div className={`${styles.img_popup_user}`}>
+          <img
+            width="35px"
+            height="35px"
+            src="/job-1695950247.png"
+            className=""
+            alt="avatar"
+          />
+        </div>
+        <div className={`${styles.text_dropdown_user}`}>
+          <p className={`${styles.text01_dr_user}`}>Nguyen The Anh</p>
+          <a
+            href="/thong-tin-nha-tuyen-dung.html"
+            className={`${styles.text02_dr_user}`}
+          >
+            Thông tin cơ bản
+          </a>
+        </div>
+      </div>
+      <div className={`${styles.it_dr_user}`}>
+        <img
+          src="/ic_popup_01.png"
+          alt="logout-ic"
+          className={`${styles.icon_18}`}
+        />
+        <p className={`${styles.logout}`}>Đăng xuất</p>
+      </div>
+    </div>
+  );
   return (
     <div className={styles.main_header}>
       <div className={`${styles.container} ${styles.container_header}`}>
         <div className={`${styles.block_pc} ${styles.pc}`}>
           <div className={styles.logo}>
             <a href="/">
-              <img className={styles.img_hd} src="/logo.png" alt="logo timviec365.vn" />
+              <img
+                className={styles.img_hd}
+                src="/logo.png"
+                alt="logo timviec365.vn"
+              />
             </a>
           </div>
           <div className={styles.header_right}>
@@ -52,19 +88,25 @@ const HeaderLogin = () => {
               <a href="/dang-du-an.html"> + Đăng việc</a>
             </button>
             <div className={styles.icon_notifi}>
-              <img className={styles.img_hd} src="/icon_notifi.png" alt="icon_notifi" />
-            </div>
-            <div className={styles.border} />
-            <div className={styles.img_avata}>
               <img
-              className={styles.img_hd}
-                width="35px"
-                height="35px"
-                src="/job-1695950247.png"
-                className=""
-                alt="avatar"
+                className={styles.img_hd}
+                src="/icon_notifi.png"
+                alt="icon_notifi"
               />
             </div>
+            <div className={styles.border} />
+            <Popover content={content} trigger="click" placement="bottomRight">
+              <div className={styles.img_avata}>
+                <img
+                  className={styles.img_hd}
+                  width="35px"
+                  height="35px"
+                  src="/job-1695950247.png"
+                  className=""
+                  alt="avatar"
+                />
+              </div>
+            </Popover>
           </div>
         </div>
         <div className={`${styles.block_mobi} ${styles.mobi}`}>

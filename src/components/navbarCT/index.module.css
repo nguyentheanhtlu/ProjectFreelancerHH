@@ -654,8 +654,6 @@ input:checked + .slider:before {
   color: #666666;
 }
 
-
-
 .label_style {
   float: left;
   width: 100%;
@@ -1383,7 +1381,6 @@ input:checked + .slider:before {
   .cover_input_uv {
     width: 100%;
   }
- 
 }
 
 @media only screen and (max-width: 625px) {
@@ -1506,4 +1503,18 @@ input:checked + .slider:before {
   width: 100%;
   float: left;
 }
-
+.title_logout,
+.title_minus_point {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 24px;
+  color: #444444;
+}
+.content_logout,
+.content_minus_point {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.003em;
+  color: #444444;
+  margin: 24px 0px;
+}

@@ -1631,3 +1631,16 @@ select.error {
   width: 100%;
   height: 100%;
 }
+.fix_xt{
+  display: flex;
+  gap: 20px;
+  border-bottom: #474747 0.5px solid; 
+  align-items: flex-end;
+  padding: 15px;
+}
+.it_dr_user{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: flex-end;
+}
