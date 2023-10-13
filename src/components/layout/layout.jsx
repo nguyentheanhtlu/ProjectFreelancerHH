@@ -20,9 +20,10 @@ export default function Layout({ children }) {
           maxWidth: "1275px",
         }}
       >
-        <NavBarCT />
+        <NavBarCT /> 
         {children}
       </div>
+      
 
       <Footer />
     </div>

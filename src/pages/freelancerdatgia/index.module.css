@@ -1,0 +1,74 @@
+.right_container {
+    float: left;
+    width: 80%;
+    height: 100%;
+    background: #F7F9FB;
+    padding: 30px;
+    border-left: 1px solid #D5DCE1;
+    min-height: 600px;
+}
+
+.cate {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.cate span, .cate a {
+    font-size: 16px;
+    line-height: 24px;
+    color: #666C7C;
+}
+
+.job_new {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+
+.text_p_job {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+}
+
+.title_table_02 {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: #4C5BD4;
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+
+.item_title_table_02, .item_table_02 {
+    float: left;
+    width: calc(65% / 5);
+    /* width: calc(100% / 5); */
+    text-align: center;
+}
+
+.main_table_job {
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+}
+
+
+.p_it_title_02 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.cate span:last-child a {
+    color: #4C5BD4;
+}

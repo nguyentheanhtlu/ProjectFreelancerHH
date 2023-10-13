@@ -102,3 +102,20 @@ input[type="date"] {
 }
 
 
+/* khanh css */
+
+.right_container_styles{
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji' !important;
+  font-weight: 500 !important;
+}
+
+.ant-upload{
+  width: 100% !important;
+}
+.ant-form-item-control-input-content{
+  text-align: center !important;
+}
+.ant-select-selection-item {
+  text-align: left; 
+  margin-left: 10px;
+}
