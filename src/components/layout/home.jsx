@@ -13,8 +13,8 @@ export default function Home({ children }) {
         />
       </Head>
       <HeaderComponents />
+      
       <div>{children}</div>
-
       <Footer />
     </div>
   );
