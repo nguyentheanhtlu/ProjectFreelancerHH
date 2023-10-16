@@ -796,8 +796,9 @@ input:checked + .slider:before {
 }
 
 .input_item_tab {
-  float: left;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .cover_tab_input {
@@ -842,7 +843,6 @@ input:checked + .slider:before {
 
 .tab_both {
   float: left;
-  width: 100%;
   position: relative;
 }
 
@@ -1502,4 +1502,8 @@ input:checked + .slider:before {
 .dels_area {
   width: 100%;
   float: left;
+}
+.job_dream{
+  display: flex;
+  flex-wrap: wrap;
 }

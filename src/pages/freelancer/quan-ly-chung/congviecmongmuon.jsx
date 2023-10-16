@@ -1,6 +1,17 @@
-import styles from "./hoan-thien-ho-so/index.module.css";
+import { useState } from "react";
+import styles from "./index.module.css";
 
 const Congviecmongmuon = () => {
+  const [status, setStatus] = useState(false);
+  const [event, setEvent] = useState(false);
+  const setStatusLG = () => {
+    setStatus(true);
+    setEvent(false)
+  };
+  const setStatusEV = () => {
+    setEvent(true);
+    setStatus(false);
+  };
   return (
     <div className={styles.profile_bottom}>
       <form
@@ -47,13 +58,6 @@ const Congviecmongmuon = () => {
                 <span
                   className={`${styles.select2_selection} ${styles.select2_selection_single}`}
                 >
-                  <span
-                    className={styles.select2_selection_rendered}
-                    id="select2-hinh_thuc-container"
-                    title="Bán thời gian tạm thời"
-                  >
-                    Bán thời gian tạm thời
-                  </span>
                   <span className={styles.select2_selection_arrow}>
                     <b />
                   </span>
@@ -93,13 +97,6 @@ const Congviecmongmuon = () => {
                 <span
                   className={`${styles.select2_selection} ${styles.select2_selection_single}`}
                 >
-                  <span
-                    className={styles.select2_selection_rendered}
-                    id="select2-cong_viec-container"
-                    title="IT & Lập trình"
-                  >
-                    IT & Lập trình
-                  </span>
                   <span className={styles.select2_selection_arrow}>
                     <b />
                   </span>
@@ -134,13 +131,6 @@ const Congviecmongmuon = () => {
                 <span
                   className={`${styles.select2_selection} ${styles.select2_selection_single}`}
                 >
-                  <span
-                    className={styles.select2_selection_rendered}
-                    id="select2-thanh_pho-container"
-                    title="Hà Nội"
-                  >
-                    Hà Nội
-                  </span>
                   <span className={styles.select2_selection_arrow}>
                     <b />
                   </span>
@@ -154,7 +144,12 @@ const Congviecmongmuon = () => {
               <p className={`${styles.title_input} ${styles.title_input_tab}`}>
                 Mức lương mong muốn
               </p>
-              <div className={styles.ht_luong_tong}>
+              <div
+                className={styles.ht_luong_tong}
+                onClick={(e) => {
+                  setStatusLG(e);
+                }}
+              >
                 <p className={styles.tab} data-tab="co_dinh">
                   Cố định
                 </p>
@@ -166,7 +161,12 @@ const Congviecmongmuon = () => {
                   defaultChecked=""
                 />
               </div>
-              <div className={styles.ht_luong_tong}>
+              <div
+                className={styles.ht_luong_tong}
+                onClick={(e) => {
+                  setStatusEV(e);
+                }}
+              >
                 <p
                   className={`${styles.tab} ${styles.active}`}
                   data-tab="uoc_luong"
@@ -181,61 +181,64 @@ const Congviecmongmuon = () => {
                 />
               </div>
             </div>
-            <div
-              className={styles.input_item}
-              id="co_dinh"
-              className={`${styles.tab_both} ${styles.d_none}`}
-            >
+            {status === true ? (
+              <div
+                id="co_dinh"
+                className={`${styles.tab_both} ${styles.d_none} ${styles.input_item}`}
+              >
+                <input
+                  type="number"
+                  name="luong"
+                  id="luong"
+                  className={styles.input_style}
+                  placeholder="Nhập mức lương (VNĐ)"
+                  defaultValue={10000000}
+                />
+                <label
+                  htmlFor="luong"
+                  id="luong_error"
+                  className={`${styles.error_uv} ${styles.error}`}
+                />
+              </div>
+            ) : <div
+            className={`${styles.tab_both} ${styles.cover_input_style} ${styles.d_none} ${styles.active}`}
+            id="uoc_luong"
+            style={{width: "47%"}}
+          >
+            <div className={styles.w_50}>
               <input
                 type="number"
-                name="luong"
-                id="luong"
+                name="luong_1"
+                id="luong_1"
                 className={styles.input_style}
-                placeholder="Nhập mức lương (VNĐ)"
-                defaultValue={10000000}
+                placeholder="Từ ... (VNĐ)"
+                defaultValue={0}
               />
               <label
-                htmlFor="luong"
-                id="luong_error"
+                htmlFor="luong_1"
+                id="luong_1_error"
                 className={`${styles.error_uv} ${styles.error}`}
               />
             </div>
-            <div
-              className={`${styles.tab_both} ${styles.cover_input_style} ${styles.d_none} ${styles.active}`}
-              id="uoc_luong"
-            >
-              <div className={styles.w_50}>
-                <input
-                  type="number"
-                  name="luong_1"
-                  id="luong_1"
-                  className={styles.input_style}
-                  placeholder="Từ ... (VNĐ)"
-                  defaultValue={0}
-                />
-                <label
-                  htmlFor="luong_1"
-                  id="luong_1_error"
-                  className={`${styles.error_uv} ${styles.error}`}
-                />
-              </div>
-              <div className={styles.dash}>-</div>
-              <div className={styles.w_50}>
-                <input
-                  type="number"
-                  name="luong_2"
-                  id="luong_2"
-                  className={styles.input_style}
-                  placeholder="Đến ... (VNĐ)"
-                  defaultValue={0}
-                />
-                <label
-                  htmlFor="luong_2"
-                  id="luong_2_error"
-                  className={`${styles.error_uv} ${styles.error}`}
-                />
-              </div>
+            <div className={styles.dash}>-</div>
+            <div className={styles.w_50}>
+              <input
+                type="number"
+                name="luong_2"
+                id="luong_2"
+                className={styles.input_style}
+                placeholder="Đến ... (VNĐ)"
+                defaultValue={0}
+              />
+              <label
+                htmlFor="luong_2"
+                id="luong_2_error"
+                className={`${styles.error_uv} ${styles.error}`}
+              />
             </div>
+          </div>
+          }
+           
             <div className={styles.input_item}>
               <select
                 name="ht_tra_luong"
@@ -257,13 +260,6 @@ const Congviecmongmuon = () => {
                   <span
                     className={`${styles.select2_selection} ${styles.select2_selection_single}`}
                   >
-                    <span
-                      className={styles.select2_selection_rendered}
-                      id="select2-ht_tra_luong-container"
-                      title="Tháng"
-                    >
-                      Tháng
-                    </span>
                     <span className={styles.select2_selection_arrow}>
                       <b />
                     </span>
