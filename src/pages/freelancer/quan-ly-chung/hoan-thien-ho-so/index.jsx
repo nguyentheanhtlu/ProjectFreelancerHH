@@ -2,6 +2,8 @@ import { Tabs } from "antd";
 import Profile from "../profile";
 import styles from "./index.module.css";
 import Gioithieubanthan from "../gioithieubanthan";
+import Congviecmongmuon from "../congviecmongmuon";
+import Kinang from "../kinang";
 const QLC = () => {
   const onChange = (key) => {
     console.log(key);
@@ -20,17 +22,17 @@ const QLC = () => {
     {
       key: "3",
       label: "Công việc mong muốn",
-      children: <div>b</div>,
+      children: <Congviecmongmuon/>,
     },
     {
       key: "4",
       label: "Kỹ năng",
-      children: <div>c</div>
+      children: <Kinang/>,
     },
     {
       key: "5",
       label: "Hồ sơ năng lực",
-      children: <div>d</div>,
+      children: <div></div>,
     }
   ];
   return (

@@ -1,5 +1,10 @@
+import { useState } from "react";
 import styles from "./index.module.css";
 const NavBarFLC = () => {
+  const [event, setEvent] = useState(false);
+  const setStausNavBar = (callback, state) => {
+    callback(!state);
+  };
   return (
     <div className={`${styles.left_container} ${styles.block_pc}`}>
       <div className={`${styles.user_menu} ${styles.block_mobi}`}>
@@ -32,32 +37,38 @@ const NavBarFLC = () => {
       </div>
       <ul className={`${styles.menu_left_container}`}>
         <li className={`${styles.item_menu_left}`}>
-          <p className={`${styles.a_item_menu_uv} ${styles.ic_menu_uv01a}`}>
+          <p
+            className={`${styles.a_item_menu_uv} ${styles.ic_menu_uv01a}`}
+            onClick={(e) => {
+              setStausNavBar(setEvent, event);
+            }}
+          >
             Quản lý chung
           </p>
           {/* hoàn thiện hồ sơ */}
           {/* tất cả việc làm */}
-          <ul
-            className={`${styles.sub_menu_left} ${styles.sub_ic_menu_uv01a}`}
-            style={{ display: "none" }}
-          >
-            <li>
-              <a
-                href="/thong-tin-ung-vien.html"
-                className={`${styles.it_sub_menu_left} ${styles.bg_gray}`}
-              >
-                Hoàn thiện hồ sơ
-              </a>
-            </li>
-            <li>
-              <a
-                href="/tim-viec-lam-freelancer.html"
-                className={`${styles.it_sub_menu_left}`}
-              >
-                Tất cả việc làm
-              </a>
-            </li>
-          </ul>
+          {event ? (
+            <ul
+              className={`${styles.sub_menu_left} ${styles.sub_ic_menu_uv01a}`}
+            >
+              <li>
+                <a
+                  href="/thong-tin-ung-vien.html"
+                  className={`${styles.it_sub_menu_left} ${styles.bg_gray}`}
+                >
+                  Hoàn thiện hồ sơ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/tim-viec-lam-freelancer.html"
+                  className={`${styles.it_sub_menu_left}`}
+                >
+                  Tất cả việc làm
+                </a>
+              </li>
+            </ul>
+          ) : null}
         </li>
         <li className={`${styles.item_menu_left}`}>
           <a
