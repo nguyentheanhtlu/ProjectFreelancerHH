@@ -1,4 +1,4 @@
-import { Collapse, Dropdown, Modal, Space } from "antd";
+import { Button, Collapse, Dropdown, Modal, Space } from "antd";
 import styles from "./index.module.css";
 import DropdownQLHS from "../Dropdown/dropdownQLHS";
 import DropdownQLTS from "../Dropdown/dropdownQLTS";
@@ -173,7 +173,15 @@ const NavBarCT = () => {
           ) : null}
         </li>
       </ul>
-      <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}
+       footer={[
+        <Button key="back" onClick={handleCancel}>
+          Hủy bỏ
+        </Button>,
+        <Button key="submit" type="primary" onClick={handleOk}>
+          Đồng ý
+        </Button>,]}
+      >
         <div className={`${styles.popup_logout} ${styles.main_popup}`}>
           <p className={`${styles.title_logout}`}>Đăng xuất</p>
           <p className={`${styles.content_logout}`}>
