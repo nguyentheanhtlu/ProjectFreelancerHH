@@ -11,6 +11,8 @@ const HeaderComponents = () => {
   useEffect(() => {
     if (router.pathname.includes("cong-ty")) {
       setHeaderLogin(true);
+    } else if (router.pathname.includes("freelancer")) {
+      setHeaderLogin(true);
     } else {
       setHeaderLogin(false);
     }

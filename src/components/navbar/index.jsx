@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import NavBarCT from "../navbarCT";
+import NavBarFLC from "../navbarFreelancer";
 
 const NavbarComponents = () => {
   const [navbar, setNavbar] = useState(false);
@@ -14,7 +15,7 @@ const NavbarComponents = () => {
     }
   }, [router.pathname]);
 
-  return <div>{navbar ? <NavBarCT /> : null}</div>;
+  return <div>{navbar ? <NavBarCT /> : <NavBarFLC/>}</div>;
 };
 
 export default NavbarComponents;

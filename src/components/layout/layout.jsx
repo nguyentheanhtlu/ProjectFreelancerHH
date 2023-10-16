@@ -1,6 +1,6 @@
 import Footer from "../footer/Footer";
 import HeaderComponents from "../headerComponents";
-import NavBarCT from "../navbarCT";
+import NavbarComponents from "../navbar";
 import Head from "next/head";
 
 export default function Layout({ children }) {
@@ -20,7 +20,7 @@ export default function Layout({ children }) {
           maxWidth: "1275px",
         }}
       >
-        <NavBarCT /> 
+        <NavbarComponents />
         {children}
       </div>
       
