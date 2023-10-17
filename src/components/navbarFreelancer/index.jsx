@@ -1,10 +1,22 @@
 import { useState } from "react";
 import styles from "./index.module.css";
+import { Button, Modal } from "antd";
 const NavBarFLC = () => {
   const [event, setEvent] = useState(false);
   const setStausNavBar = (callback, state) => {
     callback(!state);
   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className={`${styles.left_container} ${styles.block_pc}`}>
       <div className={`${styles.user_menu} ${styles.block_mobi}`}>
@@ -105,11 +117,32 @@ const NavBarFLC = () => {
         <li className={`${styles.item_menu_left}`}>
           <p
             className={`${styles.a_item_menu_uv} ${styles.ic_menu_uv04} ${styles.logout_click}`}
+            onClick={showModal}
           >
             Đăng xuất
           </p>
         </li>
       </ul>
+      <Modal
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={[
+          <Button key="back" onClick={handleCancel}>
+            Hủy bỏ
+          </Button>,
+          <Button key="submit" type="primary" onClick={handleOk}>
+            Đồng ý
+          </Button>,
+        ]}
+      >
+        <div className={`${styles.popup_logout} ${styles.main_popup}`}>
+          <p className={`${styles.title_logout}`}>Đăng xuất</p>
+          <p className={`${styles.content_logout}`}>
+            Bạn muốn đăng xuất khỏi hệ thống ?
+          </p>
+        </div>
+      </Modal>
     </div>
   );
 };

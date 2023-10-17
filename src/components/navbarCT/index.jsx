@@ -3,8 +3,10 @@ import styles from "./index.module.css";
 import DropdownQLHS from "../Dropdown/dropdownQLHS";
 import DropdownQLTS from "../Dropdown/dropdownQLTS";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const NavBarCT = () => {
+  const router = useRouter();
   const [event, setEvent] = useState(false);
   const [event1, setEvent1] = useState(false);
   const [event2, setEvent2] = useState(false);
@@ -39,12 +41,12 @@ const NavBarCT = () => {
       </div>
       <ul className={styles.menu_left_container}>
         <li className={`${styles.item_menu_left}`}>
-          <a
-            href="/thong-tin-nha-tuyen-dung.html"
+          <p
             className={`${styles.a_item_menu} ${styles.ic_menu_ntd01} ${styles.active}`}
+            onClick={() => router.push("/cong-ty/quan-ly-chung")}
           >
             Quản lý chung
-          </a>
+          </p>
         </li>
         <li className={`${styles.item_menu_left}`}>
           <p
@@ -61,16 +63,16 @@ const NavBarCT = () => {
                 className={`${styles.sub_menu_left} ${styles.sub_ic_menu_ntd02}`}
               >
                 <li className={`${styles.bam}`} data-bam="bam_du_an">
-                  <a
-                    href="/dang-viec-theo-du-an.html"
+                  <p
                     className={`${styles.it_sub_menu_left}`}
+                    onClick={() => router.push("/cong-ty/dang-viec-theo-du-an")}
                   >
                     Đăng việc theo dự án
-                  </a>
+                  </p>
                 </li>
                 <li>
                   <a
-                    href="/dang-viec-ban-thoi-gian.html"
+                    // href="/dang-viec-ban-thoi-gian.html"
                     className={`${styles.it_sub_menu_left}`}
                   >
                     Đăng việc bán thời gian
@@ -81,12 +83,13 @@ const NavBarCT = () => {
           ) : null}
         </li>
         <li className={`${styles.item_menu_left}`}>
-          <a
-            href="/tin-da-dang.html"
+          <p
+            // href="/tin-da-dang.html"
             className={`${styles.a_item_menu} ${styles.ic_menu_ntd03}`}
+            onClick={() => router.push("/cong-ty/tin-da-dang")}
           >
             Tin đã đăng
-          </a>
+          </p>
         </li>
         <li className={`${styles.item_menu_left}`}>
           <a
@@ -153,12 +156,9 @@ const NavBarCT = () => {
                 className={`${styles.sub_menu_left} ${styles.sub_ic_menu_ntd06}`}
               >
                 <li>
-                  <a
-                    href="/cap-nhat-thong-tin.html"
-                    className={`${styles.it_sub_menu_left}`}
-                  >
+                  <p className={`${styles.it_sub_menu_left}`} onClick={() => router.push("/cong-ty/quan-ly-tai-khoan/cap-nhat-thong-tin")}>
                     Cập nhật thông tin
-                  </a>
+                  </p>
                 </li>
                 <li>
                   <p
@@ -173,14 +173,18 @@ const NavBarCT = () => {
           ) : null}
         </li>
       </ul>
-      <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}
-       footer={[
-        <Button key="back" onClick={handleCancel}>
-          Hủy bỏ
-        </Button>,
-        <Button key="submit" type="primary" onClick={handleOk}>
-          Đồng ý
-        </Button>,]}
+      <Modal
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={[
+          <Button key="back" onClick={handleCancel}>
+            Hủy bỏ
+          </Button>,
+          <Button key="submit" type="primary" onClick={handleOk}>
+            Đồng ý
+          </Button>,
+        ]}
       >
         <div className={`${styles.popup_logout} ${styles.main_popup}`}>
           <p className={`${styles.title_logout}`}>Đăng xuất</p>
